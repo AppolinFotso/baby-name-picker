@@ -24,11 +24,9 @@ function App() {
     if (value === "") {
       setBabiesNAme(sortedBabyNames);
     } else {
-      const newNameList = sortedBabyNames.map((el) => {
-        if (el.name.toLowerCase().includes(value.toLowerCase())) {
-          return el;
-        }
-      });
+      const newNameList = sortedBabyNames.filter((el) =>
+        el.name.toLowerCase().includes(value.toLowerCase())
+      );
       setBabiesNAme(newNameList);
     }
   }

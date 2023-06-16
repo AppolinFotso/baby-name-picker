@@ -57,3 +57,14 @@
   flex-wrap: wrap;
   margin: 5em 3em 0;
 }
+
+.search {
+  margin-top: 3em;
+  border-bottom: 3px solid green;
+  border-right: 3px solid purple;
+  border-left: 3px solid purple;
+  border-top: 3px solid green;
+  box-shadow: 4px 4px 2px green;
+  width: 25em;
+  height: 3em;
+}
