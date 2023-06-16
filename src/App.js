@@ -1,6 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import babyNames from "./babyNames.json";
+import Boys from "./Boys";
+import Girls from "./Girls";
+import { nanoid } from "nanoid";
 //
 
 const sortedBabyNames = [];
@@ -14,6 +17,13 @@ for (let i = 0; i < names.length; i++) {
   }
 }
 function App() {
+  const displayNames = sortedBabyNames.map((el) => {
+    if (el.sex === "m") {
+      return <Boys key={nanoid()} name={el.name} />;
+    } else {
+      return <Girls key={nanoid()} name={el.name} />;
+    }
+  });
   return (
     <div className="App">
       <header className="App-header">
@@ -22,6 +32,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
+      <div>{displayNames}</div>
     </div>
   );
 }
