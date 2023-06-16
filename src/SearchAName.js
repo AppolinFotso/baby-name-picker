@@ -1,7 +1,14 @@
 import React from "react";
 
-function SearchName() {
-  return <input type="text" />;
+function SearchName(props) {
+  return (
+    <input
+      type="text"
+      onChange={(e) => {
+        props.getInput(e.target.value);
+      }}
+    />
+  );
 }
 
 export default SearchName;
